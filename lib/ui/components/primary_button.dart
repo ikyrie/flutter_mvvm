@@ -8,14 +8,24 @@ class PrimaryButton extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Ink(
+        padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 19),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: Color(0xFFB370FF),
+          color: const Color(0xFFB370FF),
         ),
-        child: Row(
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("Quero começar!"),
-            Icon(Icons.arrow_forward),
+            Text(
+              "Quero começar!",
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 20,
+                color: Color(0xFF1D0E44),
+              ),
+            ),
+            Icon(Icons.arrow_forward, color: Color(0xFF1D0E44),),
           ],
         ),
       ),
