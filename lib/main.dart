@@ -28,7 +28,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Hello World"),),
+      body: Column(
+        children: <Widget>[
+          Image.asset("assets/logo.png"),
+          Image.asset("assets/splash.png"),
+          Text("O lugar ideal para buscar, salvar e organizar seus filmes favoritos!"),
+          InkWell(
+            onTap: (){},
+            child: Ink(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Color(0xFFB370FF),
+              ),
+              child: Row(
+                children: <Widget>[
+                  Text("Quero começar!"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
