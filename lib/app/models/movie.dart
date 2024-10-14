@@ -16,6 +16,9 @@ class Movie {
     required this.description,
   });
 
+  String getImageCoverPath() {
+    return 'https://image.tmdb.org/t/p/original/$cover';
+  }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
