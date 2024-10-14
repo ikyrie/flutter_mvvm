@@ -15,15 +15,15 @@ class MovieCard extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.black, borderRadius: BorderRadius.circular(8)),
         ),
-        const Column(
+        Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               "Movie Title",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(bottom: 8.0),
               child: Text(
                 "Lançamento: 01/01/2022",
@@ -33,15 +33,16 @@ class MovieCard extends StatelessWidget {
             Row(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(right: 8.0),
+                  padding: const EdgeInsets.only(right: 8.0),
                   child: InkWell(
-                      child: Icon(
+                    onTap: () {},
+                      child: const Icon(
                     Icons.favorite,
                     color: Color(0xFFB370FF),
                     size: 15,
-                  )),
+                  ),),
                 ),
-                Text("Favoritar")
+                const Text("Favoritar")
               ],
             )
           ],
