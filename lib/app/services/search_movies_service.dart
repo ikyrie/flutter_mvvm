@@ -28,3 +28,29 @@ class SearchPopularMoviesService implements SearchMoviesService {
   }
 }
 
+class SearchForMovie implements SearchMoviesService {
+  String query;
+
+  SearchForMovie({required this.query});
+
+  @override
+  Future<List<Movie>> getMovies() async {
+    final List<Movie> movieList = <Movie>[];
+
+    try {
+      final response = await http.get(Uri.parse(searchMovieUrl + query + searchParams), headers: headers,);
+      if(response.statusCode == 200) {
+        for (dynamic movie in json.decode(response.body)['results']) {
+          movieList.add(Movie.fromMap(movie));
+        }
+      } else {
+        throw Exception(response.body);
+      }
+      return movieList;      
+    } catch (e) {
+      print(e);
+      return movieList;
+    }
+  }
+
+}
