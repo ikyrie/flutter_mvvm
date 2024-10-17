@@ -1,16 +1,16 @@
-import 'package:cinetopia/app/services/search_movies_service.dart';
+import 'package:cinetopia/app/viewmodel/search_movies_viewmodel.dart';
 import 'package:cinetopia/ui/components/movie_card.dart';
 import 'package:flutter/material.dart';
 
 class SearchMovies extends StatelessWidget {
-  final SearchPopularMoviesService searchMoviesService = SearchPopularMoviesService();
+  final SearchMoviesViewmodel searchMoviesViewmodel = SearchMoviesViewmodel();
 
   SearchMovies({super.key});
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: searchMoviesService.getMovies(),
+      future: searchMoviesViewmodel.getPopularMovies(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return CustomScrollView(
@@ -47,9 +47,9 @@ class SearchMovies extends StatelessWidget {
               SliverList.builder(
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(bottom: 32),
-                  child: MovieCard(),
+                  child: MovieCard(movie: searchMoviesViewmodel.moviesList[index]),
                 ),
-                itemCount: 10,
+                itemCount: searchMoviesViewmodel.moviesList.length,
               ),
             ],
           );
