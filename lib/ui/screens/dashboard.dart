@@ -31,8 +31,8 @@ class _DashboardState extends State<Dashboard> {
         onTap: (value) => _changeIndex(value),
         currentIndex: _currentIndex,
         items: [
-        BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Filmes"),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Favoritos"),],),
+          BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Filmes"),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Favoritos"),],),
     );
   }
 }
