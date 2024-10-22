@@ -1,4 +1,4 @@
-import 'package:cinetopia/ui/screens/favorite_movies.dart';
+import 'package:cinetopia/ui/screens/release_movies.dart';
 import 'package:cinetopia/ui/screens/search_movies.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
   final List<Widget> _screens = <Widget>[
     SearchMovies(),
-    FavoriteMovies(),
+    ReleaseMovies(),
   ];
 
   void _changeIndex(int index) {
