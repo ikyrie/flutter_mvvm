@@ -11,7 +11,10 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
-  final List<Widget> _screens = <Widget>[SearchMovies(), FavoriteMovies(),];
+  final List<Widget> _screens = <Widget>[
+    SearchMovies(),
+    FavoriteMovies(),
+  ];
 
   void _changeIndex(int index) {
     setState(() {
@@ -32,7 +35,10 @@ class _DashboardState extends State<Dashboard> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Filmes"),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Favoritos"),],),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_month_outlined), label: "Lançamentos"),
+        ],
+      ),
     );
   }
 }
