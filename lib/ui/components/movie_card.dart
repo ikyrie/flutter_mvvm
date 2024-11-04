@@ -36,21 +36,6 @@ class MovieCard extends StatelessWidget {
                 style: TextStyle(color: Color(0xFFA5A5A5)),
               ),
             ),
-            Row(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: InkWell(
-                    onTap: () {},
-                      child: const Icon(
-                    Icons.favorite,
-                    color: Color(0xFFB370FF),
-                    size: 15,
-                  ),),
-                ),
-                const Text("Favoritar")
-              ],
-            )
           ],
         )
       ],

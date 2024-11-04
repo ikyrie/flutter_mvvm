@@ -1,4 +1,4 @@
-import 'package:cinetopia/ui/screens/favorite_movies.dart';
+import 'package:cinetopia/ui/screens/upcoming.dart';
 import 'package:cinetopia/ui/screens/search_movies.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
-  final List<Widget> _screens = <Widget>[SearchMovies(), FavoriteMovies(),];
+  final List<Widget> _screens = <Widget>[SearchMovies(), Upcoming(),];
 
   void _changeIndex(int index) {
     setState(() {
@@ -32,7 +32,7 @@ class _DashboardState extends State<Dashboard> {
         currentIndex: _currentIndex,
         items: [
         BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Filmes"),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: "Favoritos"),],),
+        BottomNavigationBarItem(icon: Icon(Icons.today), label: "Lançamentos"),],),
     );
   }
 }

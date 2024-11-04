@@ -2,4 +2,5 @@ const headers = { 'accept': 'application/json', 'Authorization': 'Bearer eyJhbGc
 const String popularMoviesUrl = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
 const String searchMovieUrl = "https://api.themoviedb.org/3/search/movie?query=";
 const String searchParams = "&include_adult=false&language=en-US&page=1";
+const String upcomingUrl = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&region=US&page=1";
 const String posterUrl = "https://image.tmdb.org/t/p/w500/";

@@ -65,7 +65,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - assets/fav.png
+    - assets/upcoming.png
     - assets/logo.png
     - assets/movie.png
     - assets/popular.png
